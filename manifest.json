@@ -1,0 +1,14 @@
+{
+    "manifest_version": 2,
+    "name": "SECool",
+    "version": "1.0",
+    "description": "使用搜索引擎出现一些酷酷的效果",
+    "content_scripts": [
+        {
+            "matches": ["*://www.baidu.com/*","*://www.sogou.com/*",
+                "*://www.so.com/*"],
+            "css": ["css/animate.css","css/style.css"],
+            "js": ["js/jquery.min.js","js/index.js"]
+        }
+    ]
+}

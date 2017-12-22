@@ -1,0 +1,45 @@
+.secool-input {
+    position: relative;
+}
+
+.secool-input .secool-wave {
+    position: absolute;
+    z-index: -1;
+    top: -1px;
+    opacity: 0;
+    border: 1px solid #3385ff;
+    width: calc(100% - 1px);
+    height: calc(100% - 1px);
+    animation: secool-animation 4s infinite
+}
+
+.secool-input.secool-name-baidu .secool-wave {
+    border: 1px solid #3385ff;
+}
+
+.secool-input.secool-name-sogou .secool-wave {
+    border: 1px solid #fd6853;
+}
+
+.secool-input.secool-name-so .secool-wave {
+    border: 1px solid #19b955;
+}
+
+.secool-input .secool-wave:nth-of-type(2) {
+    animation-delay: .4s;
+}
+
+.secool-input .secool-wave:nth-of-type(3) {
+    animation-delay: .8s;
+}
+
+@keyframes secool-animation {
+    from {
+        opacity: 0.9;
+        top: scale(1);
+    }
+    to {
+        opacity: 0;
+        transform: scale(1.3, 2.2);
+    }
+}
