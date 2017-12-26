@@ -48,10 +48,20 @@ $(function (){
         logoSelector = "#logo-l>span,#sogou_wrap_id>.header>.logo";
         className = "secool-name-sogou";
     } else if (CURRENTURL.indexOf("www.so.com") > 0) {//360
-        formSelector = "#suggest-align";
+        formSelector = "#input-container";
         inputSelector = "#input";
         logoSelector = "#bd_logo>a,#g-hd-nav>.g-hd-logo>a";
         className = "secool-name-so";
+    } else if (CURRENTURL.indexOf("bing.com") > 0) {//必应
+        formSelector = "#sb_form>.b_searchboxForm";
+        inputSelector = "#sb_form_q";
+        logoSelector = "#sbox>.hp_sw_logo,.b_logo";
+        className = "secool-name-bing";
+    } else if (CURRENTURL.indexOf("www.google.com") > 0) {//谷歌
+        formSelector = "#sbtc";
+        inputSelector = "#lst-ib";
+        logoSelector = "#hplogo,#logocont";
+        className = "secool-name-google";
     }
     var formEl = $(formSelector);
     var inputEl = $(inputSelector);

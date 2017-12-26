@@ -6,7 +6,8 @@
     "content_scripts": [
         {
             "matches": ["*://www.baidu.com/*","*://www.sogou.com/*",
-                "*://www.so.com/*"],
+                "*://www.so.com/*","*://cn.bing.com/*",
+                "*://www.google.com/*"],
             "css": ["css/animate.css","css/style.css"],
             "js": ["js/jquery.min.js","js/index.js"]
         }
