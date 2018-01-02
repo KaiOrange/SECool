@@ -1,6 +1,11 @@
 .secool-input {
     position: relative;
+    overflow: visible !important;
     z-index: 2;
+}
+.secool-logo {
+    position: relative;
+    z-index: 3;
 }
 
 .secool-input .secool-wave {
@@ -37,6 +42,14 @@
 
 .secool-input.secool-name-google .secool-wave {
     border: 1px solid #4286F3;
+}
+
+.secool-input.secool-name-google .secool-wave:nth-of-type(2) {
+    border: 1px solid #EB4537;
+}
+
+.secool-input.secool-name-google .secool-wave:nth-of-type(3) {
+    border: 1px solid #FAC230;
 }
 
 .secool-input .secool-wave:nth-of-type(2) {

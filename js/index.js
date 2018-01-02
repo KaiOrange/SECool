@@ -57,20 +57,21 @@ $(function (){
         inputSelector = "#sb_form_q";
         logoSelector = "#sbox>.hp_sw_logo,.b_logo";
         className = "secool-name-bing";
-    } else if (CURRENTURL.indexOf("www.google.com") > 0) {//谷歌
-        formSelector = "#sbtc";
+    } else if (CURRENTURL.indexOf("www.google.com") > 0 || CURRENTURL.indexOf("www.google.ae") > 0) {//谷歌
+        formSelector = "#sfdiv";
         inputSelector = "#lst-ib";
-        logoSelector = "#hplogo,#logocont";
+        logoSelector = "#hplogo,#logo";
         className = "secool-name-google";
     }
     var formEl = $(formSelector);
     var inputEl = $(inputSelector);
     var logoEl = $(logoSelector);
+    logoEl.addClass("secool-logo");
     formEl.addClass(className);
 
-    for (var i = 0; i < 3; i++) {
-        formEl.append('<div class="secool-wave"></div>');
-    }
+    var additionDivStr = '<div class="secool-wave"></div><div class="secool-wave"></div><div class="secool-wave"></div>';
+  
+    formEl.append(additionDivStr);
     formEl.addClass("secool-input");
     inputEl.focus(function () {
         formEl.addClass("secool-input");
